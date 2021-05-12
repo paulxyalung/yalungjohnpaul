@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DEMO login</title>
+</head>
+<body>
+
+	<form>
+		Username: <input type="text" id="uname"> <br>
+		Password: <input type="password" id="pswrd"> <br>
+		<input type="submit" onclick="login()" value="LOGIN">
+	</form>
+
+
+<script type="text/javascript">
+
+	function login() {
+		var duname = "ucu";
+		var dpswrd = "admin";
+
+		uname = document.getElementById('uname').value;
+		pswrd = document.getElementById('pswrd').value;
+
+		if(duname == uname && dpswrd == pswrd){
+			alert("Welcome to UCU");
+		}
+		else if (duname != uname && dpswrd == pswrd){
+			alert("Invalid Username");
+		}
+		else if (duname == uname && dpswrd != pswrd){
+			alert("Invalid Password")
+		}
+
+		else {
+			alert("Access Denied");
+		}
+
+	}
+
+</script>
+
+</body>
+</html>
